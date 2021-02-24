@@ -4,6 +4,8 @@ import com.example.Sessiontwo.dto.EmployeeRequestDto;
 import com.example.Sessiontwo.dto.EmployeeResponseDto;
 import com.example.Sessiontwo.entity.Employee;
 
+import java.util.List;
+
 /**
  * @author meghna.bajoria
  * @since 23/02/21 2:27 PM
@@ -17,4 +19,6 @@ public interface EmployeeService {
     EmployeeResponseDto updateEmployeeById(Long id, EmployeeRequestDto employeeRequestDto);
 
     EmployeeResponseDto deleteEmployeeById(Long id);
+
+    List<EmployeeResponseDto> getEmployeeListByDepartment(Long departmentId);
 }

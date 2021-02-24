@@ -3,11 +3,9 @@ package com.example.Sessiontwo.entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.ManyToAny;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author meghna.bajoria
@@ -26,6 +24,8 @@ public class Employee {
 
     private String name;
 
-    private String departmentName;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Department department;
+
 
 }

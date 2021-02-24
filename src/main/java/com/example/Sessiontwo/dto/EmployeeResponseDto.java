@@ -1,5 +1,6 @@
 package com.example.Sessiontwo.dto;
 
+import com.example.Sessiontwo.entity.Department;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,5 +16,12 @@ public class EmployeeResponseDto {
 
     private String name;
 
-    private String departmentName;
+    private DepartmentResponseDto department;
+
+    public void setDepartmentFromEntity(Department department){
+        DepartmentResponseDto departmentResponseDto =  new DepartmentResponseDto();
+        departmentResponseDto.setId(department.getId());
+        departmentResponseDto.setName(department.getName());
+        this.department = departmentResponseDto;
+    }
 }
