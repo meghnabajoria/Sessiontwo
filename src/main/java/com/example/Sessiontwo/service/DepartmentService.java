@@ -2,6 +2,7 @@ package com.example.Sessiontwo.service;
 
 import com.example.Sessiontwo.dto.DepartmentRequestDto;
 import com.example.Sessiontwo.dto.DepartmentResponseDto;
+import com.example.Sessiontwo.entity.Department;
 
 /**
  * @author meghna.bajoria
@@ -10,4 +11,5 @@ import com.example.Sessiontwo.dto.DepartmentResponseDto;
 public interface DepartmentService {
     DepartmentResponseDto createDepartment(DepartmentRequestDto departmentRequestDto);
 
+    Department getDepartmentById(Long Id);
 }

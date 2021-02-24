@@ -1,5 +1,6 @@
 package com.example.Sessiontwo.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -25,6 +26,7 @@ public class Employee {
     private String name;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonBackReference
     private Department department;
 
 
